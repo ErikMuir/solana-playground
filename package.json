@@ -2,13 +2,16 @@
   "name": "solana-playground",
   "version": "1.0.0",
   "scripts": {
-    "play": "ts-node-esm ./src/index.ts",
+    "play": "ts-node-esm ./cli/index.ts",
+    "start": "ts-node-esm ./api/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "@solana/web3.js": "^1.87.6"
+    "@solana/web3.js": "^1.87.6",
+    "express": "^4.18.2"
   },
   "devDependencies": {
+    "@types/express": "^4.17.21",
     "@types/node": "^20.10.4",
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3"

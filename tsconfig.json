@@ -1,13 +1,9 @@
 {
   "extends": "ts-node/node16/tsconfig.json",
   "ts-node": {
-    "transpileOnly": true, // Remove if you want ts-node to do typechecking.
+    "transpileOnly": true,
     "files": true,
-    "compilerOptions": {
-      // compilerOptions specified here will override those declared below,
-      // but *only* in ts-node.  Useful if you want ts-node and tsc to use
-      // different options with a single tsconfig.json.
-    }
+    "compilerOptions": {}
   },
   "compilerOptions": {
     "target": "es2020",
@@ -24,8 +20,7 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "baseUrl": "./src"
   },
-  "include": ["**/*.ts", "**/*.tsx", "src/**/*.js", "hardhat.config.ts"],
-  "exclude": ["node_modules", "dist"]
+  "include": ["**/*.ts"],
+  "exclude": ["node_modules"]
 }
